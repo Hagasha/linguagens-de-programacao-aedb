@@ -14,6 +14,7 @@ namespace projeto_aedb1
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+            MockAutor.CarregaAutor();
             MockGenero.CarregaGenero();
 
             Application.Run(new FrmMenu());
