@@ -9,6 +9,9 @@ namespace projeto_aedb1.Helper
 {
     public static class DataHelper
     {
-        public static List<Genero> ListaGenero {  get; set; }
+        public static List<Genero> ListaGenero { get; set;  }
+        public static List<Autor> ListaAutor { get; set; }
+        
+
     }
 }

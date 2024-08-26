@@ -31,14 +31,15 @@
             components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
+            MnuAutor = new ToolStripMenuItem();
             MnuGenero = new ToolStripMenuItem();
             MnuSair = new ToolStripMenuItem();
+            MnuAulas = new ToolStripMenuItem();
+            MnuAula01 = new ToolStripMenuItem();
             MnuSuspenso = new ContextMenuStrip(components);
             MnSGenero = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             LblDisplay = new ToolStripStatusLabel();
-            MnuAulas = new ToolStripMenuItem();
-            MnuAula01 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             MnuSuspenso.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -55,24 +56,45 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuGenero, MnuSair });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MnuGenero, MnuSair });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(71, 20);
             cadastrosToolStripMenuItem.Text = "&Cadastros";
             // 
+            // MnuAutor
+            // 
+            MnuAutor.Name = "MnuAutor";
+            MnuAutor.Size = new Size(180, 22);
+            MnuAutor.Text = "&Autor";
+            MnuAutor.Click += MnuAutor_Click;
+            // 
             // MnuGenero
             // 
             MnuGenero.Name = "MnuGenero";
-            MnuGenero.Size = new Size(112, 22);
+            MnuGenero.Size = new Size(180, 22);
             MnuGenero.Text = "&Gênero";
             MnuGenero.Click += MnuGenero_Click;
             // 
             // MnuSair
             // 
             MnuSair.Name = "MnuSair";
-            MnuSair.Size = new Size(112, 22);
+            MnuSair.Size = new Size(180, 22);
             MnuSair.Text = "Sai&r";
             MnuSair.Click += MnuSair_Click;
+            // 
+            // MnuAulas
+            // 
+            MnuAulas.DropDownItems.AddRange(new ToolStripItem[] { MnuAula01 });
+            MnuAulas.Name = "MnuAulas";
+            MnuAulas.Size = new Size(48, 20);
+            MnuAulas.Text = "&Aulas";
+            // 
+            // MnuAula01
+            // 
+            MnuAula01.Name = "MnuAula01";
+            MnuAula01.Size = new Size(110, 22);
+            MnuAula01.Text = "Aula01";
+            MnuAula01.Click += MnuAula01_Click;
             // 
             // MnuSuspenso
             // 
@@ -103,20 +125,6 @@
             LblDisplay.DisplayStyle = ToolStripItemDisplayStyle.Text;
             LblDisplay.Name = "LblDisplay";
             LblDisplay.Size = new Size(300, 17);
-            // 
-            // MnuAulas
-            // 
-            MnuAulas.DropDownItems.AddRange(new ToolStripItem[] { MnuAula01 });
-            MnuAulas.Name = "MnuAulas";
-            MnuAulas.Size = new Size(48, 20);
-            MnuAulas.Text = "&Aulas";
-            // 
-            // MnuAula01
-            // 
-            MnuAula01.Name = "MnuAula01";
-            MnuAula01.Size = new Size(180, 22);
-            MnuAula01.Text = "Aula01";
-            MnuAula01.Click += MnuAula01_Click;
             // 
             // FrmMenu
             // 
@@ -151,5 +159,6 @@
         public ToolStripStatusLabel LblDisplay;
         private ToolStripMenuItem MnuAulas;
         private ToolStripMenuItem MnuAula01;
+        private ToolStripMenuItem MnuAutor;
     }
 }
