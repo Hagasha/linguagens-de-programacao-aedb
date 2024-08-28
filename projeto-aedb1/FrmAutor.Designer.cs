@@ -87,7 +87,7 @@
             // 
             GrdItens.AllowUserToAddRows = false;
             GrdItens.AllowUserToDeleteRows = false;
-            GrdItens.BackgroundColor = Color.LightPink;
+            GrdItens.BackgroundColor = Color.Ivory;
             GrdItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, BtnAlterar, BtnExcluir });
             resources.ApplyResources(GrdItens, "GrdItens");

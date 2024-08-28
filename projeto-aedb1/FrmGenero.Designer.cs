@@ -109,6 +109,7 @@
             GrdItens.AllowUserToAddRows = false;
             GrdItens.AllowUserToDeleteRows = false;
             GrdItens.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            GrdItens.BackgroundColor = SystemColors.ControlLight;
             GrdItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, BtnAlterar, BtnExcluir });
             GrdItens.Location = new Point(4, 112);
@@ -144,6 +145,7 @@
             AcceptButton = BtnSalvar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.RosyBrown;
             CancelButton = BtnFechar;
             ClientSize = new Size(641, 450);
             Controls.Add(GrdItens);

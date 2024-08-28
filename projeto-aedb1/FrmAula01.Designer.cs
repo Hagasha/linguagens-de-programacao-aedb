@@ -40,7 +40,7 @@
             // BtnMensagem
             // 
             BtnMensagem.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            BtnMensagem.BackColor = Color.FromArgb(255, 128, 0);
+            BtnMensagem.BackColor = SystemColors.Highlight;
             BtnMensagem.Location = new Point(1, 50);
             BtnMensagem.Name = "BtnMensagem";
             BtnMensagem.Size = new Size(798, 51);
@@ -62,7 +62,7 @@
             // BtnMudarCorFundoForms
             // 
             BtnMudarCorFundoForms.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            BtnMudarCorFundoForms.BackColor = Color.FromArgb(255, 128, 0);
+            BtnMudarCorFundoForms.BackColor = Color.Plum;
             BtnMudarCorFundoForms.Location = new Point(1, 107);
             BtnMudarCorFundoForms.Name = "BtnMudarCorFundoForms";
             BtnMudarCorFundoForms.Size = new Size(798, 51);
@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Silver;
+            BackColor = Color.SlateGray;
             ClientSize = new Size(800, 450);
             Controls.Add(MsgBox);
             Controls.Add(Mensagem);
