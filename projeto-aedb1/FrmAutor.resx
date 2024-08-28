@@ -266,27 +266,15 @@
   <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Codigo.HeaderText" xml:space="preserve">
-    <value>Código</value>
-  </data>
   <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Nome.HeaderText" xml:space="preserve">
-    <value>Nome</value>
-  </data>
   <metadata name="BtnAlterar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="BtnAlterar.HeaderText" xml:space="preserve">
-    <value>Alterar</value>
-  </data>
   <metadata name="BtnExcluir.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="BtnExcluir.HeaderText" xml:space="preserve">
-    <value>Excluir</value>
-  </data>
   <data name="GrdItens.Location" type="System.Drawing.Point, System.Drawing">
     <value>-1, 118</value>
   </data>
@@ -308,6 +296,30 @@
   <data name="&gt;&gt;GrdItens.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Codigo.HeaderText" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Nome.HeaderText" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <metadata name="BtnAlterar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BtnAlterar.HeaderText" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <metadata name="BtnExcluir.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BtnExcluir.HeaderText" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -315,7 +327,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>618, 450</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cadastro de Autores</value>

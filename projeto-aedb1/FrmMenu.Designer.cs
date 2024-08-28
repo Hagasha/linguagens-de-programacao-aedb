@@ -48,6 +48,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.SlateGray;
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, MnuAulas });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -99,26 +100,28 @@
             // 
             // MnuSuspenso
             // 
+            MnuSuspenso.BackColor = Color.Azure;
             MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSGenero });
             MnuSuspenso.Name = "MnuSuspenso";
-            MnuSuspenso.Size = new Size(181, 70);
+            MnuSuspenso.Size = new Size(113, 48);
             // 
             // MnSAutor
             // 
             MnSAutor.Name = "MnSAutor";
-            MnSAutor.Size = new Size(180, 22);
+            MnSAutor.Size = new Size(112, 22);
             MnSAutor.Text = "&Autor";
             MnSAutor.Click += MnSAutor_Click;
             // 
             // MnSGenero
             // 
             MnSGenero.Name = "MnSGenero";
-            MnSGenero.Size = new Size(180, 22);
+            MnSGenero.Size = new Size(112, 22);
             MnSGenero.Text = "&Genero";
             MnSGenero.Click += MnSGenero_Click;
             // 
             // statusStrip1
             // 
+            statusStrip1.BackColor = Color.Azure;
             statusStrip1.Items.AddRange(new ToolStripItem[] { LblDisplay });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
@@ -138,6 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
             ContextMenuStrip = MnuSuspenso;
             Controls.Add(statusStrip1);
