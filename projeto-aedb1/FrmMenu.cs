@@ -50,5 +50,10 @@ namespace projeto_aedb1
             oFrm.MdiParent = this;
             oFrm.Show();
         }
+
+        private void MnSAutor_Click(object sender, EventArgs e)
+        {
+            MnuAutor_Click(sender, e);
+        }
     }
 }
