@@ -14,15 +14,15 @@ namespace projeto_aedb1.Mock
         {
             List<Genero> lista = new List<Genero>();
 
-            for (int i = 1; i < 11; i++)
-            {
-                Genero genero = new Genero
-                {
-                    id = i,
-                    Nome = $"Gênero {i}"
-                };
-                lista.Add(genero);
-            }
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    Genero genero = new Genero
+            //    {
+            //        id = i,
+            //        Nome = $"Gênero {i}"
+            //    };
+            //    lista.Add(genero);
+            //}
 
             DataHelper.ListaGenero = lista;
         }

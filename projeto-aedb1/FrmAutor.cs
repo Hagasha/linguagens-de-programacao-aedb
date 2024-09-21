@@ -1,4 +1,5 @@
-﻿using projeto_aedb1.Model;
+﻿using projeto_aedb1.Helper;
+using projeto_aedb1.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,7 @@ namespace projeto_aedb1
             GrdItens.AutoGenerateColumns = false;
             GrdItens.DataSource = Autor.ListarTodos();
         }
+
         private void FrmAutor_Load(object sender, EventArgs e)
         {
             CarregaGrid();
@@ -41,18 +43,9 @@ namespace projeto_aedb1
 
         private void FrmAutor_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (_mnu != null)
-            {
-                _mnu.Enabled = true;
-            }
-            if (_mnu2 != null)
-            {
-                _mnu2.Enabled = true;
-            }
-            if (this.MdiParent is FrmMenu parent)
-            {
-                parent.LblDisplay.Text = "";
-            }
+            _mnu.Enabled = true;
+            _mnu2.Enabled = true;
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "";
         }
 
         private void FrmAutor_Activated(object sender, EventArgs e)
@@ -65,32 +58,18 @@ namespace projeto_aedb1
             this.Close();
         }
 
-        private bool ValidaCampos()
+        private bool ValidaControles()
         {
-            int id;
             if (TxtNome.Text.Trim() == "")
             {
-                MessageBox.Show("Nome do Autor é obrigatório", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O campo nome é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtNome.Focus();
-                return false;
-            }
-
-            else if (TxtId.Text.Trim() == "")
-            {
-                MessageBox.Show("Código do Autor é obrigatório", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                TxtId.Focus();
-                return false;
-            }
-            else if (int.TryParse(TxtId.Text, out id) == false)
-            {
-                MessageBox.Show("Código do Autor deve ser um número", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                TxtId.Focus();
                 return false;
             }
             return true;
         }
 
-        private void LimpaCampos()
+        private void LimpaControles()
         {
             TxtId.Text = "";
             TxtNome.Text = "";
@@ -98,13 +77,12 @@ namespace projeto_aedb1
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if (ValidaCampos())
+            if (ValidaControles())
             {
                 if (Incluir)
                 {
                     Autor autor = new Autor
                     {
-                        id = int.Parse(TxtId.Text),
                         Nome = TxtNome.Text
                     };
 
@@ -112,7 +90,7 @@ namespace projeto_aedb1
                     {
                         autor.Incluir();
                         CarregaGrid();
-                        LimpaCampos();
+                        LimpaControles();
                     }
                     catch (Exception ex)
                     {
@@ -131,7 +109,7 @@ namespace projeto_aedb1
                     {
                         Autor.Alterar(autor);
                         CarregaGrid();
-                        LimpaCampos();
+                        LimpaControles();
                         Incluir = true;
                         TxtId.Enabled = true;
                     }
@@ -141,8 +119,8 @@ namespace projeto_aedb1
                         TxtId.Focus();
                     }
                 }
-            }
 
+            }
         }
 
         private void GrdItens_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -167,7 +145,6 @@ namespace projeto_aedb1
                     }
                 }
             }
-
         }
     }
 }

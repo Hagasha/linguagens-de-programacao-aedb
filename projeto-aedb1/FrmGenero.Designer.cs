@@ -46,6 +46,7 @@
             // 
             // TxtCodigo
             // 
+            TxtCodigo.Enabled = false;
             TxtCodigo.Location = new Point(12, 28);
             TxtCodigo.MaxLength = 4;
             TxtCodigo.Name = "TxtCodigo";

@@ -167,6 +167,9 @@
   <data name="&gt;&gt;BtnFechar.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="TxtId.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="TxtId.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 23</value>
   </data>
@@ -266,39 +269,6 @@
   <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="BtnAlterar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="BtnExcluir.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GrdItens.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 118</value>
-  </data>
-  <data name="GrdItens.Size" type="System.Drawing.Size, System.Drawing">
-    <value>804, 334</value>
-  </data>
-  <data name="GrdItens.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;GrdItens.Name" xml:space="preserve">
-    <value>GrdItens</value>
-  </data>
-  <data name="&gt;&gt;GrdItens.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GrdItens.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GrdItens.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="Codigo.HeaderText" xml:space="preserve">
     <value>Código</value>
   </data>
@@ -319,6 +289,27 @@
   </metadata>
   <data name="BtnExcluir.HeaderText" xml:space="preserve">
     <value>Excluir</value>
+  </data>
+  <data name="GrdItens.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 118</value>
+  </data>
+  <data name="GrdItens.Size" type="System.Drawing.Size, System.Drawing">
+    <value>804, 334</value>
+  </data>
+  <data name="GrdItens.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;GrdItens.Name" xml:space="preserve">
+    <value>GrdItens</value>
+  </data>
+  <data name="&gt;&gt;GrdItens.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GrdItens.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GrdItens.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

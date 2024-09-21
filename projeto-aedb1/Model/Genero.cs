@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace projeto_aedb1.Model
 {
@@ -21,12 +22,44 @@ namespace projeto_aedb1.Model
 
         public static List<Genero> ListarTodos()
         {
-            return (from p in DataHelper.ListaGenero select p).ToList();
+            using (var oCn = DataHelper.Conexao())
+            {
+                List<Genero> Retorno = new List<Genero>();
+                string SQL = "SELECT id, Nome FROM Genero";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                SqlDataReader oDr = comando.ExecuteReader();
+                while (oDr.Read())
+                {
+                    Genero genero = new Genero();
+                    genero.id = oDr.GetInt32(oDr.GetOrdinal("id"));
+                    genero.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                    DataHelper.ListaGenero.Add(genero);
+                    Retorno.Add(genero);
+                }
+                oDr.Close();
+                return Retorno;
+            }
         }
 
         public static Genero? Seleciona(int Codigo)
         {
-            return (from p in DataHelper.ListaGenero where p.id == Codigo select p).FirstOrDefault();
+            using (var oCn = DataHelper.Conexao())
+            {
+                string SQL = $"SELECT id, Nome FROM Genero WHERE id = {Codigo}";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                SqlDataReader oDr = comando.ExecuteReader();
+                if (oDr.Read())
+                {
+                    Genero genero = new Genero();
+                    genero.id = oDr.GetInt32(oDr.GetOrdinal("id"));
+                    genero.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                    return genero;
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 
         public static void IncluirGeneroEstatico(Genero genero)
@@ -43,35 +76,32 @@ namespace projeto_aedb1.Model
         }
         public void Incluir()
         {
-
-            Genero? generoSelecionado = Genero.Seleciona(this.id);
-            if (generoSelecionado != null)
+            using(var oCn = DataHelper.Conexao())
             {
-                throw new Exception($"O código informado está sendo utilizado no gênero {generoSelecionado.Nome}.");
-            }
-            else
-            {
-                DataHelper.ListaGenero.Add(this);
+                string SQL = $"INSERT INTO Genero VALUES('{this.Nome.Replace("'", "")}')";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                comando.ExecuteNonQuery();
             }
         }
 
         public static void Alterar(Genero genero)
         {
-            Genero? GeneroColecao = Seleciona(genero.id);
-            if(GeneroColecao == null)
+            using (var oCn = DataHelper.Conexao())
             {
-                throw new Exception($"O objeto informado não existe mais no contexto");
-            }
-            else
-            {
-                //GeneroColecao.id = genero.id;
-                GeneroColecao.Nome = genero.Nome;
+                string SQL = $"UPDATE Genero SET Nome = '{genero.Nome.Replace("'", "")}' WHERE id = {genero.id}";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                comando.ExecuteNonQuery();
             }
         }
 
         public void Excluir()
         {
-            DataHelper.ListaGenero.Remove(this);
+            using (var oCn = DataHelper.Conexao())
+            {
+                string SQL = $"DELETE FROM Genero WHERE id = {this.id}";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                comando.ExecuteNonQuery();
+            }
         }
     }
 }

@@ -42,8 +42,6 @@ namespace projeto_aedb1
 
         private void FrmGenero_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // ((FrmMenu)this.MdiParent).MnuGenero.Enabled = true;
-            // ((FrmMenu)this.MdiParent).MnSGenero.Enabled = true;
             _mnu.Enabled = true;
             _mnu2.Enabled = true;
             ((FrmMenu)this.MdiParent).LblDisplay.Text = "";
@@ -61,29 +59,12 @@ namespace projeto_aedb1
 
         private bool ValidaControles()
         {
-            int Codigo;
-            if (TxtCodigo.Text.Trim() == "")
-            {
-                MessageBox.Show("O campo código é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtCodigo.Focus();
-                return false;
-            }
-
-            else if (TxtNome.Text.Trim() == "")
+            if (TxtNome.Text.Trim() == "")
             {
                 MessageBox.Show("O campo nome é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtNome.Focus();
                 return false;
             }
-
-
-            else if (int.TryParse(TxtCodigo.Text, out Codigo) == false)
-            {
-                MessageBox.Show("O campo código não é númerico", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtCodigo.Focus();
-                return false;
-            }
-
             return true;
         }
 
@@ -101,7 +82,6 @@ namespace projeto_aedb1
                 {
                     Genero genero = new Genero
                     {
-                        id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
                     };
 

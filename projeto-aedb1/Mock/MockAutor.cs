@@ -14,17 +14,8 @@ namespace projeto_aedb1.Mock
         {
             List<Autor> lista = new List<Autor>();
 
-            for (int i = 1; i < 11; i++)
-            {
-                Autor autor = new Autor
-                {
-                    id = i,
-                    Nome = $"Autor {i}"
-                };
-                lista.Add(autor);
-            }
-
             DataHelper.ListaAutor = lista;
+            
         }
     }
 }
