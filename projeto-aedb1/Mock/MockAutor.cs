@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace projeto_aedb1.Mock
 {
-    internal class MockAutor
+    public class MockAutor
     {
      public static void CarregaAutor()
         {

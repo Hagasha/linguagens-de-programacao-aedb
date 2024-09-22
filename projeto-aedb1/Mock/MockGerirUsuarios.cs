@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using projeto_aedb1.Helper;
 using projeto_aedb1.Model;
+using projeto_aedb1.Helper;
 
 namespace projeto_aedb1.Mock
 {
-    public class MockEditora
+    public class MockGerirUsuarios
     {
-        public static void CarregaEditora()
+        public static void CarregaGerirUsuarios()
         {
-            List<Editora> lista = new List<Editora>();
+            List<Pessoa> lista = new List<Pessoa>();
 
-            DataHelper.ListaEditora = lista;
+            DataHelper.ListaPessoa= lista;
 
         }
     }

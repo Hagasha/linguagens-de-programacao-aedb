@@ -80,5 +80,17 @@ namespace projeto_aedb1
         {
             MnuIdioma_Click(sender, e);
         }
+
+        private void MnuGerirUsuario_Click(object sender, EventArgs e)
+        {
+            FrmGerirUsuario oFrm = new FrmGerirUsuario();
+            oFrm.MdiParent = this;
+            oFrm.Show();
+        }
+
+        private void MnSGerirUsuario_Click(object sender, EventArgs e)
+        {
+            MnuGerirUsuario_Click(sender, e);
+        }
     }
 }

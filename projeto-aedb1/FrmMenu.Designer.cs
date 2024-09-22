@@ -34,6 +34,7 @@
             MnuAutor = new ToolStripMenuItem();
             MenuEditora = new ToolStripMenuItem();
             MnuGenero = new ToolStripMenuItem();
+            MnuGerirUsuario = new ToolStripMenuItem();
             MnuIdioma = new ToolStripMenuItem();
             MnuSair = new ToolStripMenuItem();
             MnuAulas = new ToolStripMenuItem();
@@ -45,6 +46,7 @@
             MnSIdioma = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             LblDisplay = new ToolStripStatusLabel();
+            MnSGerirUsuario = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             MnuSuspenso.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -62,7 +64,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MenuEditora, MnuGenero, MnuIdioma, MnuSair });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MenuEditora, MnuGenero, MnuGerirUsuario, MnuIdioma, MnuSair });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(71, 20);
             cadastrosToolStripMenuItem.Text = "&Cadastros";
@@ -87,6 +89,13 @@
             MnuGenero.Size = new Size(180, 22);
             MnuGenero.Text = "&Gênero";
             MnuGenero.Click += MnuGenero_Click;
+            // 
+            // MnuGerirUsuario
+            // 
+            MnuGerirUsuario.Name = "MnuGerirUsuario";
+            MnuGerirUsuario.Size = new Size(180, 22);
+            MnuGerirUsuario.Text = "&Gerir &Usuários";
+            MnuGerirUsuario.Click += MnuGerirUsuario_Click;
             // 
             // MnuIdioma
             // 
@@ -119,9 +128,9 @@
             // MnuSuspenso
             // 
             MnuSuspenso.BackColor = Color.Azure;
-            MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSEditora, MnSGenero, MnSIdioma });
+            MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSEditora, MnSGenero, MnSGerirUsuario, MnSIdioma });
             MnuSuspenso.Name = "MnuSuspenso";
-            MnuSuspenso.Size = new Size(181, 114);
+            MnuSuspenso.Size = new Size(181, 136);
             // 
             // MnSAutor
             // 
@@ -169,6 +178,13 @@
             LblDisplay.Name = "LblDisplay";
             LblDisplay.Size = new Size(300, 17);
             // 
+            // MnSGerirUsuario
+            // 
+            MnSGerirUsuario.Name = "MnSGerirUsuario";
+            MnSGerirUsuario.Size = new Size(180, 22);
+            MnSGerirUsuario.Text = "&Gerir &Usuários";
+            MnSGerirUsuario.Click += MnSGerirUsuario_Click;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -209,5 +225,7 @@
         private ToolStripMenuItem MnSEditora;
         private ToolStripMenuItem MnuIdioma;
         private ToolStripMenuItem MnSIdioma;
+        private ToolStripMenuItem MnuGerirUsuario;
+        private ToolStripMenuItem MnSGerirUsuario;
     }
 }

@@ -8,7 +8,7 @@ using projeto_aedb1.Helper;
 
 namespace projeto_aedb1.Mock
 {
-    internal class MockIdioma
+    public class MockIdioma
     {
         public static void CarregaIdioma()
         {
