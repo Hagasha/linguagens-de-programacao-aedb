@@ -32,17 +32,17 @@ namespace projeto_aedb1
 
         private void CarregaComboBoxes()
         {
-            
+
             CmbEditora.DataSource = Editora.ListarTodos();
             CmbEditora.DisplayMember = "Nome";
             CmbEditora.ValueMember = "Id";
 
-            
+
             CmbGenero.DataSource = Genero.ListarTodos();
             CmbGenero.DisplayMember = "Nome";
             CmbGenero.ValueMember = "Id";
 
-            
+
             CmbIdioma.DataSource = Idioma.ListarTodos();
             CmbIdioma.DisplayMember = "Nome";
             CmbIdioma.ValueMember = "Id";
@@ -122,7 +122,7 @@ namespace projeto_aedb1
                 return false;
             }
 
-            
+
             if (!int.TryParse(TxtEdicao.Text, out _))
             {
                 MessageBox.Show("O campo Edição deve ser um número inteiro.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -191,5 +191,48 @@ namespace projeto_aedb1
                 }
             }
         }
-    }
+
+        private void GrdItens_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+                if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
+                {
+                    Livro objSelecionado = (Livro)GrdItens.Rows[e.RowIndex].DataBoundItem;
+
+                    
+                    if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
+                    {
+                        TxtCodigo.Text = objSelecionado.Id.ToString();
+                        TxtNome.Text = objSelecionado.Nome;
+                        CmbEditora.SelectedValue = objSelecionado.IdEditora;
+                        CmbGenero.SelectedValue = objSelecionado.IdGenero;
+                        CmbIdioma.SelectedValue = objSelecionado.IdIdioma;
+                        TxtISBN.Text = objSelecionado.ISBN;
+                        TxtDescricao.Text = objSelecionado.Descricao;
+                        TxtEdicao.Text = objSelecionado.Edicao.ToString();
+                        TxtQtdPaginas.Text = objSelecionado.QtdPaginas.ToString();
+
+                        TxtCodigo.Enabled = false;
+                        TxtNome.Focus();
+                        Incluir = false;
+                    }
+                    else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
+                    {
+                        if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                objSelecionado.Excluir();
+                                CarregaGrid();
+                                LimpaControles(); 
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Erro ao excluir o livro: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+         }
+
+     }
 }

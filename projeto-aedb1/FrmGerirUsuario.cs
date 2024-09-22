@@ -136,10 +136,10 @@ namespace projeto_aedb1
         {
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
-                Idioma objSelecionado = (Idioma)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                Pessoa objSelecionado = (Pessoa)GrdItens.Rows[e.RowIndex].DataBoundItem;
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {
-                    TxtCodigo.Text = objSelecionado.id.ToString();
+                    TxtCodigo.Text = objSelecionado.Id.ToString();
                     TxtNome.Text = objSelecionado.Nome;
                     TxtCodigo.Enabled = false;
                     TxtNome.Focus();

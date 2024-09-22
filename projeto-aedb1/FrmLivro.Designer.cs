@@ -28,6 +28,10 @@
         private void InitializeComponent()
         {
             GrdItens = new DataGridView();
+            Codigo = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            BtnAlterar = new DataGridViewButtonColumn();
+            BtnExcluir = new DataGridViewTextBoxColumn();
             BtnSalvar = new Button();
             BtnFechar = new Button();
             LblCodigo = new Label();
@@ -48,10 +52,6 @@
             TxtEdicao = new TextBox();
             LblQtdPaginas = new Label();
             TxtQtdPaginas = new TextBox();
-            Codigo = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            Alterar = new DataGridViewButtonColumn();
-            Excluir = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)GrdItens).BeginInit();
             SuspendLayout();
             // 
@@ -60,11 +60,36 @@
             GrdItens.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             GrdItens.BackgroundColor = Color.LightSalmon;
             GrdItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, Alterar, Excluir });
+            GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, BtnAlterar, BtnExcluir });
             GrdItens.Location = new Point(0, 207);
             GrdItens.Name = "GrdItens";
             GrdItens.Size = new Size(801, 243);
             GrdItens.TabIndex = 0;
+            GrdItens.CellClick += GrdItens_CellClick;
+            // 
+            // Codigo
+            // 
+            Codigo.DataPropertyName = "Id";
+            Codigo.HeaderText = "Código";
+            Codigo.Name = "Codigo";
+            // 
+            // Nome
+            // 
+            Nome.DataPropertyName = "Nome";
+            Nome.HeaderText = "Nome";
+            Nome.Name = "Nome";
+            // 
+            // BtnAlterar
+            // 
+            BtnAlterar.DataPropertyName = "Alterar";
+            BtnAlterar.HeaderText = "Alterar";
+            BtnAlterar.Name = "BtnAlterar";
+            // 
+            // BtnExcluir
+            // 
+            BtnExcluir.DataPropertyName = "Excluir";
+            BtnExcluir.HeaderText = "Excluir";
+            BtnExcluir.Name = "BtnExcluir";
             // 
             // BtnSalvar
             // 
@@ -97,6 +122,7 @@
             // 
             // TxtCodigo
             // 
+            TxtCodigo.Enabled = false;
             TxtCodigo.Location = new Point(17, 23);
             TxtCodigo.Name = "TxtCodigo";
             TxtCodigo.Size = new Size(54, 23);
@@ -236,30 +262,6 @@
             TxtQtdPaginas.Size = new Size(58, 23);
             TxtQtdPaginas.TabIndex = 20;
             // 
-            // Codigo
-            // 
-            Codigo.DataPropertyName = "Id";
-            Codigo.HeaderText = "Código";
-            Codigo.Name = "Codigo";
-            // 
-            // Nome
-            // 
-            Nome.DataPropertyName = "Nome";
-            Nome.HeaderText = "Nome";
-            Nome.Name = "Nome";
-            // 
-            // Alterar
-            // 
-            Alterar.DataPropertyName = "Alterar";
-            Alterar.HeaderText = "Alterar";
-            Alterar.Name = "Alterar";
-            // 
-            // Excluir
-            // 
-            Excluir.DataPropertyName = "Excluir";
-            Excluir.HeaderText = "Excluir";
-            Excluir.Name = "Excluir";
-            // 
             // FrmLivro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -322,7 +324,7 @@
         private TextBox TxtQtdPaginas;
         private DataGridViewTextBoxColumn Codigo;
         private DataGridViewTextBoxColumn Nome;
-        private DataGridViewButtonColumn Alterar;
-        private DataGridViewButtonColumn Excluir;
+        private DataGridViewButtonColumn BtnAlterar;
+        private DataGridViewTextBoxColumn BtnExcluir;
     }
 }

@@ -12,12 +12,11 @@ namespace projeto_aedb1.Model
         private int _idEditora;
         private int _idGenero;
         private int _idIdioma;
-        private string _ISBN;                // Nova variável
-        private string _Descricao;           // Nova variável
-        private int _Edicao;                 // Alterado para int
-        private int _QtdPaginas;             // Nova variável
+        private string _ISBN;                
+        private string _Descricao;           
+        private int _Edicao;                 
+        private int _QtdPaginas;             
 
-        // Propriedades
         public int Id
         {
             get { return _id; }
@@ -139,7 +138,7 @@ namespace projeto_aedb1.Model
 
                 string SQL = $"INSERT INTO Livro (Nome, IdEditora, IdGenero, IdIdioma, ISBN, Descricao, Edicao, QtdPaginas) " +
                              $"VALUES ('{this.Nome.Replace("'", "")}', {this.IdEditora}, {this.IdGenero}, {this.IdIdioma}, " +
-                             $"'{this.ISBN.Replace("'", "")}', '{this.Descricao.Replace("'", "")}', {this.Edicao}, " + // Ajustado para int
+                             $"'{this.ISBN.Replace("'", "")}', '{this.Descricao.Replace("'", "")}', {this.Edicao}, " + 
                              $"{this.QtdPaginas})";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
@@ -158,7 +157,7 @@ namespace projeto_aedb1.Model
                 string SQL = $"UPDATE Livro SET Nome = '{livro.Nome.Replace("'", "")}', " +
                              $"IdEditora = {livro.IdEditora}, IdGenero = {livro.IdGenero}, IdIdioma = {livro.IdIdioma}, " +
                              $"ISBN = '{livro.ISBN.Replace("'", "")}', Descricao = '{livro.Descricao.Replace("'", "")}', " +
-                             $"Edicao = {livro.Edicao}, QtdPaginas = {livro.QtdPaginas} " + // Ajustado para int
+                             $"Edicao = {livro.Edicao}, QtdPaginas = {livro.QtdPaginas} " + 
                              $"WHERE Id = {livro.Id}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
