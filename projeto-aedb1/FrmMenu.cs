@@ -68,5 +68,17 @@ namespace projeto_aedb1
         {
             MenuEditora_Click(sender, e);
         }
+
+        private void MnuIdioma_Click(object sender, EventArgs e)
+        {
+            FrmIdioma oFrm = new FrmIdioma();
+            oFrm.MdiParent = this;
+            oFrm.Show();
+        }
+
+        private void MnSIdioma_Click(object sender, EventArgs e)
+        {
+            MnuIdioma_Click(sender, e);
+        }
     }
 }

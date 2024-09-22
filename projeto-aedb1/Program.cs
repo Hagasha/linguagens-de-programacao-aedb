@@ -17,6 +17,7 @@ namespace projeto_aedb1
             MockAutor.CarregaAutor();
             MockGenero.CarregaGenero();
             MockEditora.CarregaEditora();
+            MockIdioma.CarregaIdioma();
 
             Application.Run(new FrmMenu());
         }

@@ -195,13 +195,13 @@
     <value>22, 5</value>
   </data>
   <data name="Lblid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 15</value>
+    <value>46, 15</value>
   </data>
   <data name="Lblid.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="Lblid.Text" xml:space="preserve">
-    <value>Id</value>
+    <value>Código</value>
   </data>
   <data name="&gt;&gt;Lblid.Name" xml:space="preserve">
     <value>Lblid</value>

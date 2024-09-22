@@ -1,6 +1,4 @@
-﻿using projeto_aedb1.Helper;
-using projeto_aedb1.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,39 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projeto_aedb1.Model;
+using projeto_aedb1.Helper;
 
 namespace projeto_aedb1
 {
-    public partial class FrmAutor : Form
+    public partial class FrmIdioma : Form
     {
         ToolStripMenuItem _mnu;
         ToolStripMenuItem _mnu2;
-
         private bool Incluir = true;
-        public FrmAutor(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
+
+        public FrmIdioma(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
         {
             InitializeComponent();
             _mnu = Mnu1;
             _mnu2 = Mnu2;
         }
-
-        public FrmAutor()
+        public FrmIdioma()
         {
             InitializeComponent();
         }
-
         private void CarregaGrid()
         {
             GrdItens.AutoGenerateColumns = false;
-            GrdItens.DataSource = Autor.ListarTodos();
+            GrdItens.DataSource = Idioma.ListarTodos();
         }
 
-        private void FrmAutor_Load(object sender, EventArgs e)
+        private void FrmIdioma_Load(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void FrmAutor_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmIdioma_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (_mnu != null)
             {
@@ -59,9 +57,9 @@ namespace projeto_aedb1
             }
         }
 
-        private void FrmAutor_Activated(object sender, EventArgs e)
+        private void FrmIdioma_Activated(object sender, EventArgs e)
         {
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Autores";
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Idioma";
         }
 
         private void BtnFechar_Click(object sender, EventArgs e)
@@ -82,7 +80,7 @@ namespace projeto_aedb1
 
         private void LimpaControles()
         {
-            TxtId.Text = "";
+            TxtCodigo.Text = "";
             TxtNome.Text = "";
         }
 
@@ -92,45 +90,44 @@ namespace projeto_aedb1
             {
                 if (Incluir)
                 {
-                    Autor autor = new Autor
+                    Idioma idioma = new Idioma
                     {
                         Nome = TxtNome.Text
                     };
 
                     try
                     {
-                        autor.Incluir();
+                        idioma.Incluir();
                         CarregaGrid();
                         LimpaControles();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao incluir o autor: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        TxtId.Focus();
+                        MessageBox.Show($"Um erro ocorreu ao incluir o idioma: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtCodigo.Focus();
                     }
                 }
                 else
                 {
-                    Autor autor = new Autor
+                    Idioma idioma = new Idioma
                     {
-                        id = int.Parse(TxtId.Text),
+                        id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
                     };
                     try
                     {
-                        Autor.Alterar(autor);
+                        Idioma.Alterar(idioma);
                         CarregaGrid();
                         LimpaControles();
                         Incluir = true;
-                        TxtId.Enabled = true;
+                        TxtCodigo.Enabled = true;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao alterar o autor: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        TxtId.Focus();
+                        MessageBox.Show($"Um erro ocorreu ao alterar o idioma: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtCodigo.Focus();
                     }
                 }
-
             }
         }
 
@@ -138,12 +135,12 @@ namespace projeto_aedb1
         {
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
-                Autor objSelecionado = (Autor)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                Idioma objSelecionado = (Idioma)GrdItens.Rows[e.RowIndex].DataBoundItem;
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {
-                    TxtId.Text = objSelecionado.id.ToString();
+                    TxtCodigo.Text = objSelecionado.id.ToString();
                     TxtNome.Text = objSelecionado.Nome;
-                    TxtId.Enabled = false;
+                    TxtCodigo.Enabled = false;
                     TxtNome.Focus();
                     Incluir = false;
                 }

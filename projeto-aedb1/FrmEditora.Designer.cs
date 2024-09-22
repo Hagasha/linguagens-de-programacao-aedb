@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             GrdEditora = new DataGridView();
+            Código = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            BtnAlterar = new DataGridViewButtonColumn();
+            BtnExcluir = new DataGridViewButtonColumn();
             BtnFechar = new Button();
             LblId = new Label();
             TxtNome = new TextBox();
             TxtId = new TextBox();
             LblNome = new Label();
             BtnSalvar = new Button();
-            Código = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            BtnAlterar = new DataGridViewButtonColumn();
-            BtnExcluir = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)GrdEditora).BeginInit();
             SuspendLayout();
             // 
@@ -53,59 +53,6 @@
             GrdEditora.Size = new Size(807, 347);
             GrdEditora.TabIndex = 6;
             GrdEditora.CellContentClick += GrdEditora_CellContentClick;
-            // 
-            // BtnFechar
-            // 
-            BtnFechar.Location = new Point(173, 57);
-            BtnFechar.Name = "BtnFechar";
-            BtnFechar.Size = new Size(125, 34);
-            BtnFechar.TabIndex = 5;
-            BtnFechar.Text = "Fe&char";
-            BtnFechar.UseVisualStyleBackColor = true;
-            BtnFechar.Click += BtnFechar_Click;
-            // 
-            // LblId
-            // 
-            LblId.AutoSize = true;
-            LblId.Location = new Point(28, 10);
-            LblId.Name = "LblId";
-            LblId.Size = new Size(17, 15);
-            LblId.TabIndex = 0;
-            LblId.Text = "Id";
-            // 
-            // TxtNome
-            // 
-            TxtNome.Location = new Point(76, 30);
-            TxtNome.Name = "TxtNome";
-            TxtNome.Size = new Size(656, 23);
-            TxtNome.TabIndex = 3;
-            // 
-            // TxtId
-            // 
-            TxtId.Enabled = false;
-            TxtId.Location = new Point(15, 30);
-            TxtId.Name = "TxtId";
-            TxtId.Size = new Size(42, 23);
-            TxtId.TabIndex = 1;
-            // 
-            // LblNome
-            // 
-            LblNome.AutoSize = true;
-            LblNome.Location = new Point(76, 10);
-            LblNome.Name = "LblNome";
-            LblNome.Size = new Size(40, 15);
-            LblNome.TabIndex = 2;
-            LblNome.Text = "Nome";
-            // 
-            // BtnSalvar
-            // 
-            BtnSalvar.Location = new Point(15, 59);
-            BtnSalvar.Name = "BtnSalvar";
-            BtnSalvar.Size = new Size(120, 32);
-            BtnSalvar.TabIndex = 4;
-            BtnSalvar.Text = "Salvar";
-            BtnSalvar.UseVisualStyleBackColor = true;
-            BtnSalvar.Click += BtnSalvar_Click;
             // 
             // Código
             // 
@@ -130,6 +77,61 @@
             BtnExcluir.DataPropertyName = "Excluir";
             BtnExcluir.HeaderText = "Excluir";
             BtnExcluir.Name = "BtnExcluir";
+            // 
+            // BtnFechar
+            // 
+            BtnFechar.Location = new Point(154, 57);
+            BtnFechar.Name = "BtnFechar";
+            BtnFechar.Size = new Size(125, 34);
+            BtnFechar.TabIndex = 5;
+            BtnFechar.Text = "Fe&char";
+            BtnFechar.UseVisualStyleBackColor = true;
+            BtnFechar.Click += BtnFechar_Click;
+            // 
+            // LblId
+            // 
+            LblId.AutoSize = true;
+            LblId.ForeColor = SystemColors.Control;
+            LblId.Location = new Point(12, 10);
+            LblId.Name = "LblId";
+            LblId.Size = new Size(46, 15);
+            LblId.TabIndex = 0;
+            LblId.Text = "Código";
+            // 
+            // TxtNome
+            // 
+            TxtNome.Location = new Point(76, 30);
+            TxtNome.Name = "TxtNome";
+            TxtNome.Size = new Size(656, 23);
+            TxtNome.TabIndex = 3;
+            // 
+            // TxtId
+            // 
+            TxtId.Enabled = false;
+            TxtId.Location = new Point(15, 30);
+            TxtId.Name = "TxtId";
+            TxtId.Size = new Size(42, 23);
+            TxtId.TabIndex = 1;
+            // 
+            // LblNome
+            // 
+            LblNome.AutoSize = true;
+            LblNome.ForeColor = SystemColors.Control;
+            LblNome.Location = new Point(76, 10);
+            LblNome.Name = "LblNome";
+            LblNome.Size = new Size(40, 15);
+            LblNome.TabIndex = 2;
+            LblNome.Text = "Nome";
+            // 
+            // BtnSalvar
+            // 
+            BtnSalvar.Location = new Point(15, 59);
+            BtnSalvar.Name = "BtnSalvar";
+            BtnSalvar.Size = new Size(120, 32);
+            BtnSalvar.TabIndex = 4;
+            BtnSalvar.Text = "Salvar";
+            BtnSalvar.UseVisualStyleBackColor = true;
+            BtnSalvar.Click += BtnSalvar_Click;
             // 
             // FrmEditora
             // 

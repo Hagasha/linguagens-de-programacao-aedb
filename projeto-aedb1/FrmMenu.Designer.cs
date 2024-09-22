@@ -34,15 +34,17 @@
             MnuAutor = new ToolStripMenuItem();
             MenuEditora = new ToolStripMenuItem();
             MnuGenero = new ToolStripMenuItem();
+            MnuIdioma = new ToolStripMenuItem();
             MnuSair = new ToolStripMenuItem();
             MnuAulas = new ToolStripMenuItem();
             MnuAula01 = new ToolStripMenuItem();
             MnuSuspenso = new ContextMenuStrip(components);
             MnSAutor = new ToolStripMenuItem();
+            MnSEditora = new ToolStripMenuItem();
             MnSGenero = new ToolStripMenuItem();
+            MnSIdioma = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             LblDisplay = new ToolStripStatusLabel();
-            MnSEditora = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             MnuSuspenso.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -60,7 +62,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MenuEditora, MnuGenero, MnuSair });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MenuEditora, MnuGenero, MnuIdioma, MnuSair });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(71, 20);
             cadastrosToolStripMenuItem.Text = "&Cadastros";
@@ -86,6 +88,13 @@
             MnuGenero.Text = "&Gênero";
             MnuGenero.Click += MnuGenero_Click;
             // 
+            // MnuIdioma
+            // 
+            MnuIdioma.Name = "MnuIdioma";
+            MnuIdioma.Size = new Size(180, 22);
+            MnuIdioma.Text = "&Idioma";
+            MnuIdioma.Click += MnuIdioma_Click;
+            // 
             // MnuSair
             // 
             MnuSair.Name = "MnuSair";
@@ -110,9 +119,9 @@
             // MnuSuspenso
             // 
             MnuSuspenso.BackColor = Color.Azure;
-            MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSEditora, MnSGenero });
+            MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSEditora, MnSGenero, MnSIdioma });
             MnuSuspenso.Name = "MnuSuspenso";
-            MnuSuspenso.Size = new Size(181, 92);
+            MnuSuspenso.Size = new Size(181, 114);
             // 
             // MnSAutor
             // 
@@ -121,12 +130,26 @@
             MnSAutor.Text = "&Autor";
             MnSAutor.Click += MnSAutor_Click;
             // 
+            // MnSEditora
+            // 
+            MnSEditora.Name = "MnSEditora";
+            MnSEditora.Size = new Size(180, 22);
+            MnSEditora.Text = "&Editora";
+            MnSEditora.Click += MnSEditora_Click;
+            // 
             // MnSGenero
             // 
             MnSGenero.Name = "MnSGenero";
             MnSGenero.Size = new Size(180, 22);
             MnSGenero.Text = "&Genero";
             MnSGenero.Click += MnSGenero_Click;
+            // 
+            // MnSIdioma
+            // 
+            MnSIdioma.Name = "MnSIdioma";
+            MnSIdioma.Size = new Size(180, 22);
+            MnSIdioma.Text = "&Idioma";
+            MnSIdioma.Click += MnSIdioma_Click;
             // 
             // statusStrip1
             // 
@@ -145,13 +168,6 @@
             LblDisplay.DisplayStyle = ToolStripItemDisplayStyle.Text;
             LblDisplay.Name = "LblDisplay";
             LblDisplay.Size = new Size(300, 17);
-            // 
-            // MnSEditora
-            // 
-            MnSEditora.Name = "MnSEditora";
-            MnSEditora.Size = new Size(180, 22);
-            MnSEditora.Text = "&Editora";
-            MnSEditora.Click += MnSEditora_Click;
             // 
             // FrmMenu
             // 
@@ -191,5 +207,7 @@
         private ToolStripMenuItem MnSAutor;
         private ToolStripMenuItem MenuEditora;
         private ToolStripMenuItem MnSEditora;
+        private ToolStripMenuItem MnuIdioma;
+        private ToolStripMenuItem MnSIdioma;
     }
 }

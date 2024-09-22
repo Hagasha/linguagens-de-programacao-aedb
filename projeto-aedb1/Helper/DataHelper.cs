@@ -15,6 +15,7 @@ namespace projeto_aedb1.Helper
         public static List<Genero> ListaGenero { get; set; }
         public static List<Autor> ListaAutor { get; set; }
         public static List<Editora> ListaEditora { get; set; }
+        public static List<Idioma> ListaIdioma { get; set; }
         public static SqlConnection Conexao()
         {
             string strconnection = "Data Source = LOYAL\\SQLEXPRESS; Initial Catalog = Livraria; Integrated Security = True; Integrated Security = True; Connect Timeout = 30; Encrypt = True; Trust Server Certificate = True;";
