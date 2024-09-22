@@ -16,6 +16,7 @@ namespace projeto_aedb1.Helper
         public static List<Autor> ListaAutor { get; set; }
         public static List<Editora> ListaEditora { get; set; }
         public static List<Idioma> ListaIdioma { get; set; }
+        public static List<Livro> ListaLivro { get; set; }
         public static List<Pessoa> ListaPessoa { get; set; }
         public static SqlConnection Conexao()
         {

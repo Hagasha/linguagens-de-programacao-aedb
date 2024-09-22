@@ -92,5 +92,17 @@ namespace projeto_aedb1
         {
             MnuGerirUsuario_Click(sender, e);
         }
+
+        private void MnuLivro_Click(object sender, EventArgs e)
+        {
+            FrmLivro oFrm = new FrmLivro();
+            oFrm.MdiParent = this;
+            oFrm.Show();
+        }
+
+        private void MnuSLivro_Click(object sender, EventArgs e)
+        {
+            MnuLivro_Click(sender, e);
+        }
     }
 }
