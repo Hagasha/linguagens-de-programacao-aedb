@@ -43,9 +43,20 @@ namespace projeto_aedb1
 
         private void FrmAutor_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _mnu.Enabled = true;
-            _mnu2.Enabled = true;
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "";
+            if(_mnu != null)
+    {
+                _mnu.Enabled = true;
+            }
+
+            if (_mnu2 != null)
+            {
+                _mnu2.Enabled = true;
+            }
+
+            if (this.MdiParent is FrmMenu parentMenu)
+            {
+                parentMenu.LblDisplay.Text = "";
+            }
         }
 
         private void FrmAutor_Activated(object sender, EventArgs e)
