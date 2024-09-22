@@ -169,7 +169,6 @@
         #endregion
 
         private TextBox TxtCodigo;
-        private TextBox textBox2;
         private Label LblCodigo;
         private Label label1;
         private ToolTip toolTip1;

@@ -32,6 +32,7 @@
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             MnuAutor = new ToolStripMenuItem();
+            MenuEditora = new ToolStripMenuItem();
             MnuGenero = new ToolStripMenuItem();
             MnuSair = new ToolStripMenuItem();
             MnuAulas = new ToolStripMenuItem();
@@ -41,6 +42,7 @@
             MnSGenero = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             LblDisplay = new ToolStripStatusLabel();
+            MnSEditora = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             MnuSuspenso.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -58,7 +60,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MnuGenero, MnuSair });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MnuAutor, MenuEditora, MnuGenero, MnuSair });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(71, 20);
             cadastrosToolStripMenuItem.Text = "&Cadastros";
@@ -66,21 +68,28 @@
             // MnuAutor
             // 
             MnuAutor.Name = "MnuAutor";
-            MnuAutor.Size = new Size(112, 22);
+            MnuAutor.Size = new Size(180, 22);
             MnuAutor.Text = "&Autor";
             MnuAutor.Click += MnuAutor_Click;
+            // 
+            // MenuEditora
+            // 
+            MenuEditora.Name = "MenuEditora";
+            MenuEditora.Size = new Size(180, 22);
+            MenuEditora.Text = "&Editora";
+            MenuEditora.Click += MenuEditora_Click;
             // 
             // MnuGenero
             // 
             MnuGenero.Name = "MnuGenero";
-            MnuGenero.Size = new Size(112, 22);
+            MnuGenero.Size = new Size(180, 22);
             MnuGenero.Text = "&Gênero";
             MnuGenero.Click += MnuGenero_Click;
             // 
             // MnuSair
             // 
             MnuSair.Name = "MnuSair";
-            MnuSair.Size = new Size(112, 22);
+            MnuSair.Size = new Size(180, 22);
             MnuSair.Text = "Sai&r";
             MnuSair.Click += MnuSair_Click;
             // 
@@ -101,21 +110,21 @@
             // MnuSuspenso
             // 
             MnuSuspenso.BackColor = Color.Azure;
-            MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSGenero });
+            MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSEditora, MnSGenero });
             MnuSuspenso.Name = "MnuSuspenso";
-            MnuSuspenso.Size = new Size(113, 48);
+            MnuSuspenso.Size = new Size(181, 92);
             // 
             // MnSAutor
             // 
             MnSAutor.Name = "MnSAutor";
-            MnSAutor.Size = new Size(112, 22);
+            MnSAutor.Size = new Size(180, 22);
             MnSAutor.Text = "&Autor";
             MnSAutor.Click += MnSAutor_Click;
             // 
             // MnSGenero
             // 
             MnSGenero.Name = "MnSGenero";
-            MnSGenero.Size = new Size(112, 22);
+            MnSGenero.Size = new Size(180, 22);
             MnSGenero.Text = "&Genero";
             MnSGenero.Click += MnSGenero_Click;
             // 
@@ -136,6 +145,13 @@
             LblDisplay.DisplayStyle = ToolStripItemDisplayStyle.Text;
             LblDisplay.Name = "LblDisplay";
             LblDisplay.Size = new Size(300, 17);
+            // 
+            // MnSEditora
+            // 
+            MnSEditora.Name = "MnSEditora";
+            MnSEditora.Size = new Size(180, 22);
+            MnSEditora.Text = "&Editora";
+            MnSEditora.Click += MnSEditora_Click;
             // 
             // FrmMenu
             // 
@@ -173,5 +189,7 @@
         private ToolStripMenuItem MnuAula01;
         private ToolStripMenuItem MnuAutor;
         private ToolStripMenuItem MnSAutor;
+        private ToolStripMenuItem MenuEditora;
+        private ToolStripMenuItem MnSEditora;
     }
 }

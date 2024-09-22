@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projeto_aedb1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +55,18 @@ namespace projeto_aedb1
         private void MnSAutor_Click(object sender, EventArgs e)
         {
             MnuAutor_Click(sender, e);
+        }
+
+        private void MenuEditora_Click(object sender, EventArgs e)
+        {
+            FrmEditora oFrm = new FrmEditora();
+            oFrm.MdiParent = this;
+            oFrm.Show();
+        }
+
+        private void MnSEditora_Click(object sender, EventArgs e)
+        {
+            MenuEditora_Click(sender, e);
         }
     }
 }
