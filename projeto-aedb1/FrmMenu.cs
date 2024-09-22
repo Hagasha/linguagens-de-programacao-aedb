@@ -40,15 +40,18 @@ namespace projeto_aedb1
 
         private void MnuAula01_Click(object sender, EventArgs e)
         {
-            FrmAula01 oFrm = new FrmAula01();
+            FrmAula01 oFrm = new FrmAula01(MnuAula01);
             oFrm.MdiParent = this;
+            MnuAula01.Enabled = false;
             oFrm.Show();
         }
 
         private void MnuAutor_Click(object sender, EventArgs e)
         {
-            FrmAutor oFrm = new FrmAutor();
+            FrmAutor oFrm = new FrmAutor(MnuAutor, MnSAutor);
             oFrm.MdiParent = this;
+            MnuAutor.Enabled = false;
+            MnSAutor.Enabled = false;
             oFrm.Show();
         }
 
@@ -59,8 +62,10 @@ namespace projeto_aedb1
 
         private void MenuEditora_Click(object sender, EventArgs e)
         {
-            FrmEditora oFrm = new FrmEditora();
+            FrmEditora oFrm = new FrmEditora(MenuEditora, MnSEditora);
             oFrm.MdiParent = this;
+            MenuEditora.Enabled = false;
+            MnSEditora.Enabled = false;
             oFrm.Show();
         }
 
@@ -71,8 +76,10 @@ namespace projeto_aedb1
 
         private void MnuIdioma_Click(object sender, EventArgs e)
         {
-            FrmIdioma oFrm = new FrmIdioma();
+            FrmIdioma oFrm = new FrmIdioma(MnuIdioma, MnSIdioma);
             oFrm.MdiParent = this;
+            MnuIdioma.Enabled = false;
+            MnSIdioma.Enabled = false;
             oFrm.Show();
         }
 
@@ -83,8 +90,10 @@ namespace projeto_aedb1
 
         private void MnuGerirUsuario_Click(object sender, EventArgs e)
         {
-            FrmGerirUsuario oFrm = new FrmGerirUsuario();
+            FrmGerirUsuario oFrm = new FrmGerirUsuario(MnuGerirUsuario, MnSGerirUsuario);
             oFrm.MdiParent = this;
+            MnuGerirUsuario.Enabled = false;
+            MnSGerirUsuario.Enabled = false;
             oFrm.Show();
         }
 
@@ -95,12 +104,14 @@ namespace projeto_aedb1
 
         private void MnuLivro_Click(object sender, EventArgs e)
         {
-            FrmLivro oFrm = new FrmLivro();
+            FrmLivro oFrm = new FrmLivro(MnuLivro, MnSLivro);
             oFrm.MdiParent = this;
+            MnuLivro.Enabled = false;
+            MnSLivro.Enabled = false;
             oFrm.Show();
         }
 
-        private void MnuSLivro_Click(object sender, EventArgs e)
+        private void MnSLivro_Click(object sender, EventArgs e)
         {
             MnuLivro_Click(sender, e);
         }

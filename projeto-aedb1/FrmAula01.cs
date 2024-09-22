@@ -2,9 +2,12 @@ namespace projeto_aedb1
 {
     public partial class FrmAula01 : Form
     {
-        public FrmAula01()
+        ToolStripMenuItem _mnu;
+
+        public FrmAula01(ToolStripMenuItem mnu)
         {
             InitializeComponent();
+            _mnu = mnu;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
