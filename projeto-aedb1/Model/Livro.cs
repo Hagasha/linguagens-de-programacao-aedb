@@ -48,31 +48,29 @@ namespace projeto_aedb1.Model
             set { _idIdioma = value; }
         }
 
-        public string ISBN                      // Nova propriedade
+        public string ISBN                      
         {
             get => _ISBN;
             set => _ISBN = value.Replace("'", " ");
         }
 
-        public string Descricao                 // Nova propriedade
+        public string Descricao                 
         {
             get => _Descricao;
             set => _Descricao = value.Replace("'", " ");
         }
 
-        public int Edicao                       // Alterado para int
+        public int Edicao                       
         {
             get => _Edicao;
-            set => _Edicao = value; // Não precisa de tratamento adicional
+            set => _Edicao = value; 
         }
 
-        public int QtdPaginas                   // Nova propriedade
+        public int QtdPaginas                   
         {
             get => _QtdPaginas;
             set => _QtdPaginas = value;
         }
-
-        // Método para listar todos os livros
         public static List<Livro> ListarTodos()
         {
             using (var oCn = DataHelper.Conexao())
@@ -92,7 +90,7 @@ namespace projeto_aedb1.Model
                     livro.IdIdioma = oDr.GetInt32(oDr.GetOrdinal("IdIdioma"));
                     livro.ISBN = oDr.GetString(oDr.GetOrdinal("ISBN"));
                     livro.Descricao = oDr.GetString(oDr.GetOrdinal("Descricao"));
-                    livro.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao")); // Ajustado para int
+                    livro.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao")); 
                     livro.QtdPaginas = oDr.GetInt32(oDr.GetOrdinal("QtdPaginas"));
                     Retorno.Add(livro);
                 }
@@ -101,7 +99,6 @@ namespace projeto_aedb1.Model
             }
         }
 
-        // Método para selecionar um livro pelo Id
         public static Livro? Seleciona(int Codigo)
         {
             using (var oCn = DataHelper.Conexao())
@@ -120,7 +117,7 @@ namespace projeto_aedb1.Model
                     livro.IdIdioma = oDr.GetInt32(oDr.GetOrdinal("IdIdioma"));
                     livro.ISBN = oDr.GetString(oDr.GetOrdinal("ISBN"));
                     livro.Descricao = oDr.GetString(oDr.GetOrdinal("Descricao"));
-                    livro.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao")); // Ajustado para int
+                    livro.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao")); 
                     livro.QtdPaginas = oDr.GetInt32(oDr.GetOrdinal("QtdPaginas"));
                     return livro;
                 }
@@ -131,7 +128,6 @@ namespace projeto_aedb1.Model
             }
         }
 
-        // Método para incluir um novo livro
         public void Incluir()
         {
             using (var oCn = DataHelper.Conexao())
@@ -150,7 +146,6 @@ namespace projeto_aedb1.Model
             }
         }
 
-        // Método para alterar um livro existente
         public static void Alterar(Livro livro)
         {
             using (var oCn = DataHelper.Conexao())
@@ -169,8 +164,6 @@ namespace projeto_aedb1.Model
                 comando.ExecuteNonQuery();
             }
         }
-
-        // Método para excluir um livro
         public void Excluir()
         {
             using (var oCn = DataHelper.Conexao())

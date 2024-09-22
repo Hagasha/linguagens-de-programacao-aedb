@@ -32,17 +32,17 @@ namespace projeto_aedb1
 
         private void CarregaComboBoxes()
         {
-            // Carregar ComboBox de Editoras
+            
             CmbEditora.DataSource = Editora.ListarTodos();
             CmbEditora.DisplayMember = "Nome";
             CmbEditora.ValueMember = "Id";
 
-            // Carregar ComboBox de Gêneros
+            
             CmbGenero.DataSource = Genero.ListarTodos();
             CmbGenero.DisplayMember = "Nome";
             CmbGenero.ValueMember = "Id";
 
-            // Carregar ComboBox de Idiomas
+            
             CmbIdioma.DataSource = Idioma.ListarTodos();
             CmbIdioma.DisplayMember = "Nome";
             CmbIdioma.ValueMember = "Id";
@@ -122,7 +122,7 @@ namespace projeto_aedb1
                 return false;
             }
 
-            // Verifica se a Edição e a Quantidade de Páginas são números inteiros
+            
             if (!int.TryParse(TxtEdicao.Text, out _))
             {
                 MessageBox.Show("O campo Edição deve ser um número inteiro.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
