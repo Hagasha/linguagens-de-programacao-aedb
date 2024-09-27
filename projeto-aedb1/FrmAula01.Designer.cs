@@ -43,7 +43,7 @@
             BtnMensagem.BackColor = SystemColors.Highlight;
             BtnMensagem.Location = new Point(1, 50);
             BtnMensagem.Name = "BtnMensagem";
-            BtnMensagem.Size = new Size(798, 51);
+            BtnMensagem.Size = new Size(639, 51);
             BtnMensagem.TabIndex = 0;
             BtnMensagem.Text = "Minha primeira mensagem";
             BtnMensagem.UseVisualStyleBackColor = false;
@@ -56,7 +56,7 @@
             LblMensagem.BorderStyle = BorderStyle.FixedSingle;
             LblMensagem.Location = new Point(1, 15);
             LblMensagem.Name = "LblMensagem";
-            LblMensagem.Size = new Size(798, 23);
+            LblMensagem.Size = new Size(639, 23);
             LblMensagem.TabIndex = 1;
             // 
             // BtnMudarCorFundoForms
@@ -65,7 +65,7 @@
             BtnMudarCorFundoForms.BackColor = Color.Plum;
             BtnMudarCorFundoForms.Location = new Point(1, 107);
             BtnMudarCorFundoForms.Name = "BtnMudarCorFundoForms";
-            BtnMudarCorFundoForms.Size = new Size(798, 51);
+            BtnMudarCorFundoForms.Size = new Size(639, 51);
             BtnMudarCorFundoForms.TabIndex = 2;
             BtnMudarCorFundoForms.Text = "Cor de fundo do formulário";
             BtnMudarCorFundoForms.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
             TxtMensagem.Location = new Point(1, 207);
             TxtMensagem.Multiline = true;
             TxtMensagem.Name = "TxtMensagem";
-            TxtMensagem.Size = new Size(798, 23);
+            TxtMensagem.Size = new Size(639, 23);
             TxtMensagem.TabIndex = 3;
             // 
             // Mensagem
@@ -104,7 +104,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(641, 450);
             Controls.Add(MsgBox);
             Controls.Add(Mensagem);
             Controls.Add(TxtMensagem);

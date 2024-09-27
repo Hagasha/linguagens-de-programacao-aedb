@@ -29,31 +29,57 @@
         private void InitializeComponent()
         {
             GrdItens = new DataGridView();
+            Código = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            BtnAlterar = new DataGridViewButtonColumn();
+            BtnExcluir = new DataGridViewButtonColumn();
             LblCodigo = new Label();
             TxtCodigo = new TextBox();
             LblNome = new Label();
             TxtNome = new TextBox();
             BtnSalvar = new Button();
             BtnFechar = new Button();
-            Código = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            BtnAlterar = new DataGridViewButtonColumn();
-            BtnExcluir = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)GrdItens).BeginInit();
             SuspendLayout();
             // 
             // GrdItens
             // 
             GrdItens.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            GrdItens.BackgroundColor = Color.DarkSeaGreen;
+            GrdItens.BackgroundColor = Color.PaleTurquoise;
             GrdItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, BtnAlterar, BtnExcluir });
             GrdItens.GridColor = SystemColors.ControlDark;
             GrdItens.Location = new Point(-5, 128);
             GrdItens.Name = "GrdItens";
-            GrdItens.Size = new Size(805, 324);
+            GrdItens.Size = new Size(646, 324);
             GrdItens.TabIndex = 0;
             GrdItens.CellClick += GrdItens_CellClick;
+            // 
+            // Código
+            // 
+            Código.DataPropertyName = "id";
+            Código.HeaderText = "Código";
+            Código.Name = "Código";
+            // 
+            // Nome
+            // 
+            Nome.DataPropertyName = "Nome";
+            Nome.HeaderText = "Nome";
+            Nome.Name = "Nome";
+            // 
+            // BtnAlterar
+            // 
+            BtnAlterar.DataPropertyName = "Alterar";
+            BtnAlterar.HeaderText = "Alterar";
+            BtnAlterar.Name = "BtnAlterar";
+            BtnAlterar.Resizable = DataGridViewTriState.True;
+            BtnAlterar.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // BtnExcluir
+            // 
+            BtnExcluir.DataPropertyName = "Excluir";
+            BtnExcluir.HeaderText = "Excluir";
+            BtnExcluir.Name = "BtnExcluir";
             // 
             // LblCodigo
             // 
@@ -108,38 +134,12 @@
             BtnFechar.UseVisualStyleBackColor = true;
             BtnFechar.Click += BtnFechar_Click;
             // 
-            // Código
-            // 
-            Código.DataPropertyName = "id";
-            Código.HeaderText = "Código";
-            Código.Name = "Código";
-            // 
-            // Nome
-            // 
-            Nome.DataPropertyName = "Nome";
-            Nome.HeaderText = "Nome";
-            Nome.Name = "Nome";
-            // 
-            // BtnAlterar
-            // 
-            BtnAlterar.DataPropertyName = "Alterar";
-            BtnAlterar.HeaderText = "Alterar";
-            BtnAlterar.Name = "BtnAlterar";
-            BtnAlterar.Resizable = DataGridViewTriState.True;
-            BtnAlterar.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
-            // BtnExcluir
-            // 
-            BtnExcluir.DataPropertyName = "Excluir";
-            BtnExcluir.HeaderText = "Excluir";
-            BtnExcluir.Name = "BtnExcluir";
-            // 
             // FrmIdioma
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.BurlyWood;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Bisque;
+            ClientSize = new Size(641, 450);
             Controls.Add(BtnFechar);
             Controls.Add(BtnSalvar);
             Controls.Add(TxtNome);
@@ -148,7 +148,7 @@
             Controls.Add(LblCodigo);
             Controls.Add(GrdItens);
             Name = "FrmIdioma";
-            Text = "FrmIdioma";
+            Text = "Cadastro de Idioma";
             Activated += FrmIdioma_Activated;
             FormClosed += FrmIdioma_FormClosed;
             Load += FrmIdioma_Load;

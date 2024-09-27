@@ -139,47 +139,47 @@
             MnuSuspenso.BackColor = Color.Azure;
             MnuSuspenso.Items.AddRange(new ToolStripItem[] { MnSAutor, MnSEditora, MnSGenero, MnSGerirUsuario, MnSIdioma, MnSLivro });
             MnuSuspenso.Name = "MnuSuspenso";
-            MnuSuspenso.Size = new Size(181, 158);
+            MnuSuspenso.Size = new Size(148, 136);
             // 
             // MnSAutor
             // 
             MnSAutor.Name = "MnSAutor";
-            MnSAutor.Size = new Size(180, 22);
+            MnSAutor.Size = new Size(147, 22);
             MnSAutor.Text = "&Autor";
             MnSAutor.Click += MnSAutor_Click;
             // 
             // MnSEditora
             // 
             MnSEditora.Name = "MnSEditora";
-            MnSEditora.Size = new Size(180, 22);
+            MnSEditora.Size = new Size(147, 22);
             MnSEditora.Text = "&Editora";
             MnSEditora.Click += MnSEditora_Click;
             // 
             // MnSGenero
             // 
             MnSGenero.Name = "MnSGenero";
-            MnSGenero.Size = new Size(180, 22);
+            MnSGenero.Size = new Size(147, 22);
             MnSGenero.Text = "&Genero";
             MnSGenero.Click += MnSGenero_Click;
             // 
             // MnSGerirUsuario
             // 
             MnSGerirUsuario.Name = "MnSGerirUsuario";
-            MnSGerirUsuario.Size = new Size(180, 22);
+            MnSGerirUsuario.Size = new Size(147, 22);
             MnSGerirUsuario.Text = "&Gerir &Usuários";
             MnSGerirUsuario.Click += MnSGerirUsuario_Click;
             // 
             // MnSIdioma
             // 
             MnSIdioma.Name = "MnSIdioma";
-            MnSIdioma.Size = new Size(180, 22);
+            MnSIdioma.Size = new Size(147, 22);
             MnSIdioma.Text = "&Idioma";
             MnSIdioma.Click += MnSIdioma_Click;
             // 
             // MnSLivro
             // 
             MnSLivro.Name = "MnSLivro";
-            MnSLivro.Size = new Size(180, 22);
+            MnSLivro.Size = new Size(147, 22);
             MnSLivro.Text = "&Livros";
             MnSLivro.Click += MnSLivro_Click;
             // 

@@ -63,7 +63,7 @@
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, BtnAlterar, BtnExcluir });
             GrdItens.Location = new Point(0, 207);
             GrdItens.Name = "GrdItens";
-            GrdItens.Size = new Size(801, 243);
+            GrdItens.Size = new Size(642, 243);
             GrdItens.TabIndex = 0;
             GrdItens.CellClick += GrdItens_CellClick;
             // 
@@ -93,7 +93,7 @@
             // 
             // BtnSalvar
             // 
-            BtnSalvar.Location = new Point(322, 160);
+            BtnSalvar.Location = new Point(309, 160);
             BtnSalvar.Name = "BtnSalvar";
             BtnSalvar.Size = new Size(143, 38);
             BtnSalvar.TabIndex = 1;
@@ -103,7 +103,7 @@
             // 
             // BtnFechar
             // 
-            BtnFechar.Location = new Point(508, 163);
+            BtnFechar.Location = new Point(486, 160);
             BtnFechar.Name = "BtnFechar";
             BtnFechar.Size = new Size(143, 38);
             BtnFechar.TabIndex = 2;
@@ -267,7 +267,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Indigo;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(641, 450);
             Controls.Add(TxtQtdPaginas);
             Controls.Add(LblQtdPaginas);
             Controls.Add(TxtEdicao);
@@ -290,7 +290,7 @@
             Controls.Add(BtnSalvar);
             Controls.Add(GrdItens);
             Name = "FrmLivro";
-            Text = "FrmLivro";
+            Text = "Cadastro de Livro";
             Activated += FrmLivro_Activated;
             FormClosed += FrmLivro_FormClosed;
             Load += FrmLivro_Load;

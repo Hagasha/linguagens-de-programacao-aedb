@@ -50,7 +50,7 @@
             GrdEditora.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, BtnAlterar, BtnExcluir });
             GrdEditora.Location = new Point(-3, 107);
             GrdEditora.Name = "GrdEditora";
-            GrdEditora.Size = new Size(807, 347);
+            GrdEditora.Size = new Size(648, 347);
             GrdEditora.TabIndex = 6;
             GrdEditora.CellContentClick += GrdEditora_CellContentClick;
             // 
@@ -138,7 +138,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(641, 450);
             Controls.Add(BtnSalvar);
             Controls.Add(LblNome);
             Controls.Add(TxtId);
@@ -147,7 +147,7 @@
             Controls.Add(BtnFechar);
             Controls.Add(GrdEditora);
             Name = "FrmEditora";
-            Text = "FrmEditora";
+            Text = "Cadastro de Editora";
             Activated += FrmEditora_Activated;
             FormClosed += FrmEditora_FormClosed;
             Load += FrmEditora_Load;

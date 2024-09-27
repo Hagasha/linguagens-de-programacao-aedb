@@ -50,7 +50,7 @@
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, BtnAlterar, BtnExcluir });
             GrdItens.Location = new Point(0, 118);
             GrdItens.Name = "GrdItens";
-            GrdItens.Size = new Size(799, 332);
+            GrdItens.Size = new Size(640, 332);
             GrdItens.TabIndex = 0;
             GrdItens.CellClick += GrdItens_CellClick;
             // 
@@ -135,7 +135,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkCyan;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(641, 450);
             Controls.Add(BtnFechar);
             Controls.Add(TxtNome);
             Controls.Add(LblNome);
@@ -144,7 +144,7 @@
             Controls.Add(BtnSalvar);
             Controls.Add(GrdItens);
             Name = "FrmGerirUsuario";
-            Text = "FrmGerirUsuario";
+            Text = "Gerenciamento de Usuário";
             Activated += FrmGerirUsuario_Activated;
             FormClosed += FrmGerirUsuario_FormClosed;
             Load += FrmGerirUsuario_Load;
