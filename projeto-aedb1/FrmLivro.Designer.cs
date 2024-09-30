@@ -63,7 +63,7 @@
             GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, BtnAlterar, BtnExcluir });
             GrdItens.Location = new Point(0, 207);
             GrdItens.Name = "GrdItens";
-            GrdItens.Size = new Size(642, 243);
+            GrdItens.Size = new Size(802, 243);
             GrdItens.TabIndex = 0;
             GrdItens.CellClick += GrdItens_CellClick;
             // 
@@ -267,7 +267,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Indigo;
-            ClientSize = new Size(641, 450);
+            ClientSize = new Size(801, 450);
             Controls.Add(TxtQtdPaginas);
             Controls.Add(LblQtdPaginas);
             Controls.Add(TxtEdicao);

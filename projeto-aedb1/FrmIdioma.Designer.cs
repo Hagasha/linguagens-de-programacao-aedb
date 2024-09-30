@@ -51,7 +51,7 @@
             GrdItens.GridColor = SystemColors.ControlDark;
             GrdItens.Location = new Point(-5, 128);
             GrdItens.Name = "GrdItens";
-            GrdItens.Size = new Size(646, 324);
+            GrdItens.Size = new Size(727, 324);
             GrdItens.TabIndex = 0;
             GrdItens.CellClick += GrdItens_CellClick;
             // 
@@ -139,7 +139,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(641, 450);
+            ClientSize = new Size(722, 450);
             Controls.Add(BtnFechar);
             Controls.Add(BtnSalvar);
             Controls.Add(TxtNome);
